@@ -40,7 +40,7 @@ const Cart = () => {
 
     const data = await response.json();
 
-    toast.loading("Redirecting...");
+    toast.loading("Peradresuojama...");
 
     stripe.redirectToCheckout({ sessionId: data.id });
   };
