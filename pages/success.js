@@ -23,7 +23,7 @@ const Success = () => {
           <BsBagCheckFill />
         </p>
         <h2>Ačiū, kad perkate!</h2>
-        <p className="email-msg">Check your email inbox for the receipt.</p>
+        <p className="email-msg">Į savo el. pašto dėžutę gausite kvitą.</p>
         <p className="description">
           Jei kils klausimų, prašome kreiptis
           <a className="email" href="mailto:aidasgalkus@gmail.com">
@@ -32,7 +32,7 @@ const Success = () => {
         </p>
         <Link href="/">
           <button type="button" width="300px" className="btn">
-            Continue Shopping
+            Grįžti į parduotuvę
           </button>
         </Link>
       </div>
