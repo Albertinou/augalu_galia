@@ -29,7 +29,7 @@ width: 100%;
 .navbar-container{
   display: flex;
   justify-content: space-between;
-  margin: 6px 18px;
+  margin: 6px 58px;
   position: relative;
 }
 .marquee-text{
@@ -71,7 +71,7 @@ width: 100%;
 
 }
 .cart-icon{
-  font-size: 25px;
+  font-size: 50px;
   color: gray;
   cursor: pointer;
   position: relative;
@@ -167,16 +167,16 @@ width: 100%;
 }
 .hero-banner-image{
   position: absolute;
-  top: 0%;
-  right:20%;
-  width: 450px;
-  height: 450px;
+  top: -5%;
+  right:15%;
+  width: 510px;
+  height: 510px;
 }
 
 
 .desc{
 position: absolute;
-right: 10%;
+right: 5%;
 bottom: 5%;
 width: 300px;
 line-height: 1.3;
@@ -302,7 +302,7 @@ text-align: end;
 
 }
 .footer-container .icons{
-  font-size: 30px;
+  font-size: 40px;
   display: flex;
   gap: 10px;
 }
