@@ -14,6 +14,9 @@ export default async function handler(req, res) {
         shipping_address_collection: {
           allowed_countries: ['LT'],
         },
+        phone_number_collection: {
+          "enabled": true
+        },
         shipping_options: [
           { shipping_rate: "shr_1MwVDXJ6Jdr5gk9HJt1wLMzO" },
           { shipping_rate: "shr_1MwVE0J6Jdr5gk9H9PhgSd1F" },
