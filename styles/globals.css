@@ -213,7 +213,8 @@ text-align: end;
 }
 .footer-banner-container{
   padding: 100px 40px;
-  background-color: #007e11;
+  background: linear-gradient(0deg, rgba(253,188,0,1) 0%, rgba(191,43,43,1) 100%);
+  /* background-color: #007e11; */
   border-radius: 15px;
   position: relative;
   height: 400px;
