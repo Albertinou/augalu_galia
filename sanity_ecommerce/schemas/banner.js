@@ -20,6 +20,26 @@ export default {
             },
         },
         {
+            name: 'smallTextTop',
+            title: 'SmallTextTop',
+            type: 'string',
+        },
+        {
+            name: 'midTextTop',
+            title: 'MidTextTop',
+            type: 'string',
+        },
+        {
+            name: 'largeText1Top',
+            title: 'LargeText1Top',
+            type: 'string',
+        },
+        {
+            name: 'largeText2Top',
+            title: 'LargeText2Top',
+            type: 'string',
+        },
+        {
             name: 'buttonText',
             title: 'ButtonText',
             type: 'string',
@@ -42,6 +62,11 @@ export default {
         {
             name: 'midText',
             title: 'MidText',
+            type: 'string',
+        },
+        {
+            name: 'midText2',
+            title: 'MidText2',
             type: 'string',
         },
         {

@@ -8,7 +8,7 @@ const Home = ({ products, bannerData }) => {
         <HeroBanner heroBanner={bannerData.length && bannerData[0]} />
         <div className='products-heading'>
           <h2>Mūsų prekės</h2>
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+          {/* <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p> */}
         </div>
         <div className='products-container'>
           {products?.map((product)=><Product key={product._id} 

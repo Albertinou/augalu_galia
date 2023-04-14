@@ -165,6 +165,12 @@ width: 100%;
   margin-left: -20px;
   text-transform: uppercase;
 }
+.hero-banner-container h6{
+  color: white;
+  font-size: 6em;
+  margin-left: -20px;
+  text-transform: uppercase;
+}
 .hero-banner-image{
   position: absolute;
   top: -5%;
@@ -259,7 +265,7 @@ text-align: end;
 }
 .banner-desc .right h3{
   font-weight: 800;
-  font-size: 60px;
+  font-size: 50px;
 }
 .banner-desc .right p{
   font-size: 18px;
@@ -666,6 +672,9 @@ margin-top: 160px;
   }
   .hero-banner-container h1{
     font-size: 50px;
+  }
+  .hero-banner-container h6{
+    font-size: 30px;
   }
  .hero-banner-container h3{
     font-size: 40px;
