@@ -12,6 +12,14 @@ export default {
             },
         },
         {
+            name: 'image_top',
+            title: 'Image_top',
+            type: 'image',
+            options: {
+                hotspot: true,
+            },
+        },
+        {
             name: 'buttonText',
             title: 'ButtonText',
             type: 'string',
