@@ -15,7 +15,7 @@ export default async function handler(req, res) {
           allowed_countries: ['LT'],
         },
         phone_number_collection: {
-          "enabled": true
+          enabled: true
         },
         shipping_options: [
           { shipping_rate: "shr_1MwVDXJ6Jdr5gk9HJt1wLMzO" },
@@ -48,7 +48,7 @@ export default async function handler(req, res) {
           };
         }),
         success_url: `${req.headers.origin}/success`,
-        cancel_url: `${req.headers.origin}/canceled`,
+        cancel_url: `${req.headers.origin}`,
       };
 
       // Create Checkout Sessions from body params.
