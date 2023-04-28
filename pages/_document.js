@@ -11,6 +11,7 @@ export default function Document() {
        imuniteto stiprinimas, atjauninimas, revitalizavimas, maitinimas, balansavimas, nuotaikos stabilizavimas, raminantis,
        širdies sveikata, stiprinimas,aukštas kraujo spaudimas, aukštas cholesterolio kiekis, kepenų ir inkstų ligos, kvėpavimo takų ligos,
        virusinės infekcijos, ŽIV/AIDS, vėžys, parama chemoterapijos metu, nuovargis" />
+       <meta name="google-site-verification" content="qBWJF7BPHP1nEZfuAyMb_-a8t0KFxguSv-Znb7yv3dk" />
       </Head>
       <body>
         <Main />
