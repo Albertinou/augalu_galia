@@ -33,7 +33,7 @@ export const StateContext = ({ children }) => {
       product.quantity = quantity;
       setCartItems([...cartItems, { ...product }]);
     }
-    toast.success(`${qty} ${product.name} įdėta į krepšelį`);
+    toast.success(`${qty} ${product.name2} įdėta į krepšelį`);
   };
 
   const onRemove = (product) => {
