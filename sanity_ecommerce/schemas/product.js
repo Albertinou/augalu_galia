@@ -23,6 +23,11 @@ export default {
       type: 'string',
     },
     {
+      name: 'order',
+      title: 'Order',
+      type: 'number',
+    },
+    {
       name: 'slug',
       title: 'Slug',
       type: 'slug',
@@ -41,5 +46,22 @@ export default {
       title: 'Details',
       type: 'string',
     },
+    
   ],
+  orderings: [
+    {
+      title: 'Release Date, New',
+      name: 'releaseDateDesc',
+      by: [
+        {field: 'releaseDate', direction: 'desc'}
+      ]
+    },
+    {
+      title: 'Release Date, Old',
+      name: 'releaseDateAsc',
+      by: [
+        {field: 'releaseDate', direction: 'asc'}
+      ]
+    },
+  ]
 }
