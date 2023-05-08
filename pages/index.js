@@ -11,8 +11,14 @@ const Home = ({ products, bannerData }) => {
           {/* <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p> */}
         </div>
         <div className='products-container'>
-          {products?.map((product)=><Product key={product._id} 
+       
+                   
+          {products?.sort((a,b) => a.order - b.order).map((product)=><Product key={product._id} 
           product={product} />)}
+
+
+          
+          
         </div>
 
         <FooterBanner footerBanner= {bannerData && bannerData[0]} />
@@ -27,7 +33,7 @@ export const getServerSideProps = async() =>  {
 
   const bannerQuery = '*[_type == "banner"]';
   const bannerData = await client.fetch(bannerQuery);
-
+ 
   return {
     props: { products, bannerData},
   }

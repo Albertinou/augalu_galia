@@ -92,6 +92,7 @@ const ProductDetails = ({ product, products }) => {
             {products.map((item) => (
               <Product key={item._id} product={item} />
             ))}
+            
           </div>
         </div>
       </div>
@@ -112,7 +113,7 @@ export const getStaticPaths = async () => {
       slug: product.slug.current,
     },
   }));
-
+  
   return {
     paths,
     fallback: "blocking",
@@ -124,10 +125,9 @@ export const getStaticProps = async ({ params: { slug } }) => {
   const productsQuery = '*[_type == "product"]';
   const product = await client.fetch(query);
   const products = await client.fetch(productsQuery);
-
   return {
     props: { products, product },
-    revalidate: 30,
+    revalidate: 10,
   };
 };
 

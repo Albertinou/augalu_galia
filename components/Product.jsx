@@ -25,4 +25,5 @@ const Product = ( {product: { image, name, name2, slug, price }}) => {
   )
 }
 
+
 export default Product
