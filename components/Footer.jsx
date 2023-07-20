@@ -5,7 +5,7 @@ import Link from 'next/link';
 const Footer = () => {
   return (
     <div className='footer-container'>
-      <p> <AiOutlineMail/> aidasgalkus@gmail.com &emsp;<AiOutlineMobile />+370 698 21253</p>
+      <p> <AiOutlineMail/> aidasgalkus@gmail.com &emsp;<span className='contact-phone'><AiOutlineMobile />+370 698 21253</span></p>
       <p>2023 Augalų galia </p>
       <p className='icons'>
         

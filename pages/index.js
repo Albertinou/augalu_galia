@@ -16,8 +16,6 @@ const Home = ({ products, bannerData }) => {
           {products?.sort((a,b) => a.order - b.order).map((product)=><Product key={product._id} 
           product={product} />)}
 
-
-          
           
         </div>
 
