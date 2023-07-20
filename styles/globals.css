@@ -815,6 +815,10 @@ margin-top: 160px;
   height: 350px;
 }
 
+
+
+
+
 .footer-container{
 display:flex;
 flex-direction: column;
@@ -826,5 +830,19 @@ flex-direction: column;
 }
 .footer-container span{
   display:block;
+}
+
+
+
+.footer-banner-container{
+  position:relative;
+  overflow: hidden;
+}
+
+.footer-banner-image{
+  position:absolute;
+  width:200px;
+  height:200px;
+  left:230px;
 }
 }
