@@ -7,7 +7,11 @@ const Home = ({ products, bannerData }) => {
     <>
         <HeroBanner heroBanner={bannerData.length && bannerData[0]} />
         <div className='products-heading'>
-          <h2>Mūsų prekės</h2>
+          <h2>Dėmesio!</h2>  
+          <h2>Nuo 2023-11-20 iki 2023-12-20 atostogaujame, todėl prekių užsakymai pristabdomi ir nebus pristatomi!</h2>
+          <h2>Atsiprašome už nepatogumus</h2>
+          
+          {/* <h2>Mūsų prekės</h2> */}
           {/* <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p> */}
         </div>
         <div className='products-container'>
