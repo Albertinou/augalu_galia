@@ -14,22 +14,27 @@ export default {
     },
     {
       name: 'name',
-      title: 'Name',
+      title: 'Produkto pavadinimas',
       type: 'string',
     },
     {
       name: 'name2',
-      title: 'Name2',
+      title: 'Trumpas aprašymas po produktu',
+      type: 'string',
+    },
+    {
+      name: 'name3',
+      title: 'Maisto - ne maisto papildas',
       type: 'string',
     },
     {
       name: 'order',
-      title: 'Order',
+      title: 'Produkto eilės numeris',
       type: 'number',
     },
     {
       name: 'slug',
-      title: 'Slug',
+      title: 'Čia nieko nerašyti! Spausti "Generate"',
       type: 'slug',
       options: {
         source: 'name',
@@ -38,12 +43,12 @@ export default {
     },
     {
       name: 'price',
-      title: 'Price',
+      title: 'Kaina',
       type: 'number',
     },
     {
       name: 'details',
-      title: 'Details',
+      title: 'Detalus produkto aprašymas',
       type: 'string',
     },
     
