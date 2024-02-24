@@ -10,7 +10,7 @@ import { Product } from "@/components";
 import { useStateContext } from '@/../context/StateContext'
  
 const ProductDetails = ({ product, products }) => {
-  const { image, name, name2, details, price } = product;
+  const { image, name, name2, name3, details, details2, price } = product;
   const [index, setIndex] = useState(0);
   const { decQty, incQty, qty, onAdd, setShowCart} = useStateContext();
 
@@ -47,6 +47,7 @@ const ProductDetails = ({ product, products }) => {
         <div className="product-detail-desc">
           <h1>{name}</h1>
           <h3>{name2}</h3>
+          <h3>{name3}</h3>
           {/* <div className="reviews">
             <div>
               <AiFillStar />
@@ -59,6 +60,8 @@ const ProductDetails = ({ product, products }) => {
           </div> */}
           <h4>Aprašymas: </h4>
           <p>{details}</p>
+          <h4>Sudėtis ir vartojimas:</h4>
+          <p>{details2}</p>
           <p className="price">{price}€</p>
           <div className="quantity">
             <h3>Kiekis:</h3>

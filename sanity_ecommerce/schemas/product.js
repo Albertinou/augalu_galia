@@ -48,7 +48,12 @@ export default {
     },
     {
       name: 'details',
-      title: 'Detalus produkto aprašymas',
+      title: 'Platus aprašymas, produkto nauda',
+      type: 'string',
+    },
+    {
+      name: 'details2',
+      title: 'Produkto sudėtis, laikymo salygos, vartojimas',
       type: 'string',
     },
     
