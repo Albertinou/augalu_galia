@@ -1,7 +1,16 @@
+
 import React from 'react';
 import Head from 'next/head';
 import Navbar from './Navbar';
 import Footer from './Footer';
+
+export const metadata = {
+  title: {
+    default: "Augalų galia",
+    template: "%s | Augalų galia" 
+  },
+  description: 'Augalų galia'
+}
 
 const Layout = ({ children }) => {
   return (
