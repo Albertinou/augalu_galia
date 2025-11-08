@@ -7,9 +7,9 @@ const Home = ({ products, bannerData }) => {
     <>
         <HeroBanner heroBanner={bannerData.length && bannerData[0]} />
         <div className='products-heading'>
-          {/* <h2>Dėmesio!</h2>  
-          <h2>Nuo š.m. lapkričio 5d. iki š.m. gruodžio 24d. parduotuvė nedirbs.</h2>
-          <h2>Prašome paskubėti įsigyti prekių būsimoms šventėms.</h2>
+          <h2>Dėmesio!</h2>  
+          <h2>Nuo š.m. lapkričio 13d. iki š.m. gruodžio 12d. parduotuvė nedirbs.</h2>
+          {/* <h2>Prašome paskubėti įsigyti prekių būsimoms šventėms.</h2>
           <h2>Akcija! Iki lapkričio 5d. viskas tik po 10 EUR!</h2> */}
           
           <h2>Mūsų prekės</h2>
