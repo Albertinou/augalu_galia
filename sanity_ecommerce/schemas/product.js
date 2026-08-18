@@ -33,6 +33,19 @@ export default {
       type: 'number',
     },
     {
+      name: 'category',
+      title: 'Prekių grupė',
+      type: 'string',
+      options: {
+        list: [
+          {title: 'Gamtos galia', value: 'main'},
+          {title: 'Dar daugiau iš gamtos', value: 'also'},
+        ],
+        layout: 'radio',
+      },
+      initialValue: 'main',
+    },
+    {
       name: 'slug',
       title: 'Čia nieko nerašyti! Spausti "Generate"',
       type: 'slug',

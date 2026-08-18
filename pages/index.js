@@ -2,27 +2,40 @@ import React from 'react';
 import { client } from '@/lib/client';
 import { Product, FooterBanner, HeroBanner } from  "../components"
 
-const Home = ({ products, bannerData }) => {
+const Home = ({ products, bannerData, announcement }) => {
+  const sortedProducts = products?.slice().sort((a, b) => a.order - b.order) ?? [];
+  const mainProducts = sortedProducts.filter((product) => (product.category ?? 'main') === 'main');
+  const alsoProducts = sortedProducts.filter((product) => product.category === 'also');
+
   return (
     <>
         <HeroBanner heroBanner={bannerData.length && bannerData[0]} />
+
+        {announcement?.message && (
+          <div className='products-heading'>
+            {announcement.message.split('\n').map((line, i) => (
+              <h2 key={i}>{line}</h2>
+            ))}
+          </div>
+        )}
+
         <div className='products-heading'>
-          {/*<h2>Dėmesio!</h2>  
-          <h2>Nuo š.m. lapkričio 13d. iki š.m. gruodžio 12d. parduotuvė nedirbs.</h2>*/}
-          {/* <h2>Prašome paskubėti įsigyti prekių būsimoms šventėms.</h2>
-          <h2>Akcija! Iki lapkričio 5d. viskas tik po 10 EUR!</h2> */}
-          
-          <h2>Mūsų prekės</h2>
-          {/* <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p> */}
+          <h2>Gamtos galia</h2>
         </div>
         <div className='products-container'>
-       
-                   
-          {products?.sort((a,b) => a.order - b.order).map((product)=><Product key={product._id} 
-          product={product} />)}
-
-          
+          {mainProducts.map((product)=><Product key={product._id} product={product} />)}
         </div>
+
+        {alsoProducts.length > 0 && (
+          <>
+            <div className='products-heading'>
+              <h2>Dar daugiau iš gamtos</h2>
+            </div>
+            <div className='products-container'>
+              {alsoProducts.map((product)=><Product key={product._id} product={product} />)}
+            </div>
+          </>
+        )}
 
         <FooterBanner footerBanner= {bannerData && bannerData[0]} />
     </>
@@ -36,9 +49,12 @@ export const getServerSideProps = async() =>  {
 
   const bannerQuery = '*[_type == "banner"]';
   const bannerData = await client.fetch(bannerQuery);
- 
+
+  const announcementQuery = '*[_type == "announcement" && active == true][0]';
+  const announcement = await client.fetch(announcementQuery);
+
   return {
-    props: { products, bannerData},
+    props: { products, bannerData, announcement: announcement ?? null },
   }
 }
 
