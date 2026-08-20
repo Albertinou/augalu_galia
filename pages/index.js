@@ -29,7 +29,7 @@ const Home = ({ products, bannerData, announcement }) => {
         {alsoProducts.length > 0 && (
           <>
             <div className='products-heading'>
-              <h2>Dar daugiau iš gamtos</h2>
+              <h2>Įvairūs</h2>
             </div>
             <div className='products-container'>
               {alsoProducts.map((product)=><Product key={product._id} product={product} />)}

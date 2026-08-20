@@ -39,7 +39,7 @@ export default {
       options: {
         list: [
           {title: 'Gamtos galia', value: 'main'},
-          {title: 'Dar daugiau iš gamtos', value: 'also'},
+          {title: 'Įvairūs', value: 'also'},
         ],
         layout: 'radio',
       },
