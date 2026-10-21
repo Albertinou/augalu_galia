@@ -16,7 +16,7 @@ const Product = ( {product: { image, name, name2, name3, slug, price }}) => {
       />
       <div className='product-info'>
         <p className='product-name'>{name}</p>
-        <p className='product-name3'>{name3}</p>
+        {name3 && <p className='product-name3'>{name3}</p>}
         <p className='product-name2'>{name2}</p>
         <p className='product-price'>{price}€</p>
       </div>

@@ -47,7 +47,7 @@ const ProductDetails = ({ product, products }) => {
         <div className="product-detail-desc">
           <h1>{name}</h1>
           <h3>{name2}</h3>
-          <h3>{name3}</h3>
+          {name3 && <h3>{name3}</h3>}
           {/* <div className="reviews">
             <div>
               <AiFillStar />
@@ -58,10 +58,18 @@ const ProductDetails = ({ product, products }) => {
             </div>
             <p>(20)</p>
           </div> */}
-          <h4>Aprašymas: </h4>
-          <p>{details}</p>
-          <h4>Sudėtis ir vartojimas:</h4>
-          <p>{details2}</p>
+          {details && (
+            <>
+              <h4>Aprašymas: </h4>
+              <p>{details}</p>
+            </>
+          )}
+          {details2 && (
+            <>
+              <h4>Sudėtis ir vartojimas:</h4>
+              <p>{details2}</p>
+            </>
+          )}
           <p className="price">{price}€</p>
           <div className="quantity">
             <h3>Kiekis:</h3>

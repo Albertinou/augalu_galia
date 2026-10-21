@@ -26,6 +26,7 @@ export default {
       name: 'name3',
       title: 'Maisto - ne maisto papildas',
       type: 'string',
+      hidden: ({document}) => document?.category !== 'main',
     },
     {
       name: 'order',
@@ -61,15 +62,16 @@ export default {
     },
     {
       name: 'details',
-      title: 'Platus aprašymas, produkto nauda',
+      title: 'Aprašymas',
       type: 'string',
     },
     {
       name: 'details2',
       title: 'Produkto sudėtis, laikymo salygos, vartojimas',
       type: 'string',
+      hidden: ({document}) => document?.category !== 'main',
     },
-    
+
   ],
   orderings: [
     {
