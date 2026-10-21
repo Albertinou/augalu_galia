@@ -12,6 +12,7 @@ import { useStateContext } from '@/../context/StateContext'
 const ProductDetails = ({ product, products }) => {
   const { image, name, name2, name3, details, details2, price, category } = product;
   const isSupplement = (category ?? 'main') === 'main';
+  const isAvailable = price > 0;
   const [index, setIndex] = useState(0);
   const { decQty, incQty, qty, onAdd, setShowCart} = useStateContext();
 
@@ -71,29 +72,35 @@ const ProductDetails = ({ product, products }) => {
               <p>{details2}</p>
             </>
           )}
-          <p className="price">{price}€</p>
-          <div className="quantity">
-            <h3>Kiekis:</h3>
-            <p className="quantity-desc">
-              <span className="minus" onClick={decQty}>
-                <AiOutlineMinus />
-              </span>
-              <span className="num">
-                {qty}
-              </span>
-              <span className="plus" onClick={incQty}>
-                <AiOutlinePlus />
-              </span>
-            </p>
-          </div>
-          <div className="buttons">
-            <button type="button" className="add-to-cart" onClick={() => onAdd(product, qty)}>
-              Įdėti į krepšelį
-            </button>
-            <button type="button" className="buy-now" onClick= {handleBuyNow}>
-              Pirkti dabar
-            </button>
-          </div>
+          {isAvailable ? (
+            <>
+              <p className="price">{price}€</p>
+              <div className="quantity">
+                <h3>Kiekis:</h3>
+                <p className="quantity-desc">
+                  <span className="minus" onClick={decQty}>
+                    <AiOutlineMinus />
+                  </span>
+                  <span className="num">
+                    {qty}
+                  </span>
+                  <span className="plus" onClick={incQty}>
+                    <AiOutlinePlus />
+                  </span>
+                </p>
+              </div>
+              <div className="buttons">
+                <button type="button" className="add-to-cart" onClick={() => onAdd(product, qty)}>
+                  Įdėti į krepšelį
+                </button>
+                <button type="button" className="buy-now" onClick= {handleBuyNow}>
+                  Pirkti dabar
+                </button>
+              </div>
+            </>
+          ) : (
+            <p className="price product-unavailable">Laukiama papildymo</p>
+          )}
         </div>
       </div>
 

@@ -176,6 +176,16 @@ span.text-red {
   color: black;
 }
 
+.product-unavailable {
+  color: #8a8a8a;
+  font-style: italic;
+  font-weight: 500;
+}
+
+.product-detail-desc .price.product-unavailable {
+  color: #8a8a8a;
+}
+
 .hero-banner-container {
   padding: 100px 40px;
   background-color: #dcdcdc;

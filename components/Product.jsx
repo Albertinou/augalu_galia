@@ -6,6 +6,7 @@ import Image from 'next/image';
 
 const Product = ( {product: { image, name, name2, name3, slug, price, category }}) => {
   const isSupplement = (category ?? 'main') === 'main';
+  const isAvailable = price > 0;
 
   return (
     <Link href = {`/product/${slug.current}`} className='product-card'>
@@ -20,7 +21,11 @@ const Product = ( {product: { image, name, name2, name3, slug, price, category }
         <p className='product-name'>{name}</p>
         {isSupplement && name3 && <p className='product-name3'>{name3}</p>}
         <p className='product-name2'>{name2}</p>
-        <p className='product-price'>{price}€</p>
+        {isAvailable ? (
+          <p className='product-price'>{price}€</p>
+        ) : (
+          <p className='product-price product-unavailable'>Laukiama papildymo</p>
+        )}
       </div>
     </Link>
   )
