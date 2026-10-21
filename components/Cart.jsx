@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import Link from "next/link";
 
 import {
@@ -17,6 +17,7 @@ import getStripe from "@/lib/getStripe";
 
 const Cart = () => {
   const cartRef = useRef();
+  const [agreedToTerms, setAgreedToTerms] = useState(false);
   const {
     totalPrice,
     totalQuantities,
@@ -27,6 +28,8 @@ const Cart = () => {
   } = useStateContext();
 
   const handleCheckout = async () => {
+    if (!agreedToTerms) return;
+
     const stripe = await getStripe();
     
     const response = await fetch("/api/stripe", {
@@ -129,8 +132,26 @@ const Cart = () => {
               <h3>Viso:</h3>
               <h3>{totalPrice}€</h3>
             </div>
+            <label className="terms-agreement">
+              <input
+                type="checkbox"
+                checked={agreedToTerms}
+                onChange={(e) => setAgreedToTerms(e.target.checked)}
+              />
+              <span>
+                Susipažinau ir sutinku su{" "}
+                <Link href="/pirkejams-info" target="_blank">
+                  pirkimo sąlygomis
+                </Link>
+              </span>
+            </label>
             <div className="btn-container">
-              <button type="button" className="btn" onClick={handleCheckout}>
+              <button
+                type="button"
+                className="btn"
+                onClick={handleCheckout}
+                disabled={!agreedToTerms}
+              >
                 APMOKĖTI
               </button>
             </div>

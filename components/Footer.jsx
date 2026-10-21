@@ -7,13 +7,16 @@ const Footer = () => {
     <div className='footer-container'>
       <p> <AiOutlineMail/> aidasgalkus@gmail.com &emsp;<span className='contact-phone'><AiOutlineMobile />+370 698 21253</span></p>
       <p>{new Date().getFullYear()} Augalų galia </p>
+      <p>
+        <Link href='/pirkejams-info'>Pirkėjams svarbi informacija</Link>
+      </p>
       <p className='icons'>
-        
+
         {/*    <AiFillInstagram />     */}
         <Link href='https://www.facebook.com/augalugalia' target='_blank'>
           <AiFillFacebook />
         </Link>
-        
+
       </p>
     </div>
   )
