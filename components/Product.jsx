@@ -4,7 +4,9 @@ import Link from 'next/link';
 import { urlFor } from '@/lib/client';
 import Image from 'next/image';
 
-const Product = ( {product: { image, name, name2, name3, slug, price }}) => {
+const Product = ( {product: { image, name, name2, name3, slug, price, category }}) => {
+  const isSupplement = (category ?? 'main') === 'main';
+
   return (
     <Link href = {`/product/${slug.current}`} className='product-card'>
       <img
@@ -16,7 +18,7 @@ const Product = ( {product: { image, name, name2, name3, slug, price }}) => {
       />
       <div className='product-info'>
         <p className='product-name'>{name}</p>
-        {name3 && <p className='product-name3'>{name3}</p>}
+        {isSupplement && name3 && <p className='product-name3'>{name3}</p>}
         <p className='product-name2'>{name2}</p>
         <p className='product-price'>{price}€</p>
       </div>
